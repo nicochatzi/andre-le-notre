@@ -1,11 +1,21 @@
-FROM resin/rpi-raspbian:latest
-ENTRYPOINT []
+FROM --platform=linux/amd64 nicochatzi/lenotre as base
 
-# RUN mkdir /app
-# COPY . /app
-# WORKDIR /app
 
-RUN sudo apt-get install python3-gpiozero && \
-    sudo apt-get install python3-distutils
+# RUN cargo init
+# COPY Cargo.toml /code/Cargo.toml
+# COPY Cargo.lock /code/Cargo.lock
+# RUN mkdir -p .cargo \
+#   && cargo vendor > .cargo/config
 
-CMD ["python3", "src/main.py"]
+RUN mkdir /app
+WORKDIR /app
+COPY . /app
+
+FROM base AS test
+RUN npm i
+# CMD [ "cargo", "test"",, "--offline"]
+CMD [ "cargo", "test" ]
+
+FROM base AS run
+RUN npm i
+CMD [ "npm", "start" ]

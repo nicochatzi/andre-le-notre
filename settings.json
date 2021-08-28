@@ -1,0 +1,37 @@
+{
+  "irrigation": {
+    "hour_of_day": 7,
+    "frequency": {
+      "spring": 2,
+      "summer": 3,
+      "autumn": 3,
+      "winter": 2
+    }
+  },
+  "stations": [
+    {
+      "name": "bottom",
+      "pin_num": 4,
+      "irrigation_length": 15,
+      "pressure_threshold": 100
+    },
+    {
+      "name": "mid",
+      "pin_num": 4,
+      "irrigation_length": 15,
+      "pressure_threshold": 100
+    },
+    {
+      "name": "top",
+      "pin_num": 4,
+      "irrigation_length": 15,
+      "pressure_threshold": 100
+    },
+    {
+      "name": "garden",
+      "pin_num": 4,
+      "irrigation_length": 15,
+      "pressure_threshold": 100
+    }
+  ]
+}

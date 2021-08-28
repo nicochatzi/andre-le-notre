@@ -1,0 +1,22 @@
+{
+  "irrigation": {
+    "month_of_day": 7,
+    "frequency": {
+      "hot_af": 3,
+      "cold_af": 2
+    }
+  },
+  "stations": [
+    {
+      "bane": "bottom",
+      "irrigation_length": 15,
+      "pressure_threshold": 100
+    },
+    {
+      "pressure_threshold": 100
+    },
+    {
+      "name": "top"
+    }
+  ]
+}
